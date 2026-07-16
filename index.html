@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abigail Lo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <a class="nav__logo" href="#header-page">AL</a>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Toggle menu" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ── HERO / ABOUT ─────────────────────────────────────── -->
+  <section class="header-page" id="header-page">
+    <div class="container">
+      <div class="header-page__inner reveal">
+
+        <img src="headshot.jpg" alt="Abigail Lo" class="header-page__photo" />
+
+        <div class="header-page__content">
+          <span class="header-page__greeting">hey, I'm</span>
+          <h1 class="header-page__name">Abigail Lo</h1>
+          <p class="header-page__meta">Statistics &amp; Machine Learning &middot; Carnegie Mellon University</p>
+          <p class="header-page__bio">I use data and machine learning to understand how people learn, and build tools that actually help them do it better.</p>
+          <div class="header-page__currently">
+            <div><span>Currently</span> Research Assistant, OAK Lab</div>
+            <div><span>Looking for</span> DS / ML / AI internships, Summer 2027</div>
+          </div>
+          <div class="header-page__actions">
+            <a class="btn btn--primary" href="#projects">See my work</a>
+            <div class="header-page__socials">
+              <a href="mailto:hiabigaillo@gmail.com" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/lo-abigail/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── ABOUT ─────────────────────────────────────────────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <span class="section__label reveal">About</span>
+      <h2 class="section__title reveal">A bit about me</h2>
+      <div class="about__text reveal">
+        <p>I'm a sophomore at Carnegie Mellon studying Statistics and Machine Learning. Most of my work sits at the intersection of data and human behavior. I'm interested in what the numbers reveal about how people think, learn, and make decisions, and what you can actually do with that.</p>
+        <p>Right now I'm a research assistant at the OAK Lab building ML pipelines to analyze how learners discover rules, and I've been doing UX and data work for EdTech programs on the side. I'm looking for opportunities in data science, ML, or AI broadly. EdTech is where I've spent most of my time, but I'm genuinely interested in any domain where data can do something useful.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── SKILLS ─────────────────────────────────────────────── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <span class="section__label reveal">Skills</span>
+      <h2 class="section__title reveal">What I work with</h2>
+      <div class="skills__grid reveal">
+
+        <div class="skills__group">
+          <span class="skills__group-label">Data &amp; ML</span>
+          <h3>Analysis &amp; Modeling</h3>
+          <ul class="skills__list">
+            <li>Python</li>
+            <li class="skills__sub-item">pandas, NumPy, scikit-learn, PyTorch, TensorFlow, OpenCV, MediaPipe</li>
+            <li>R</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+
+        <div class="skills__group">
+          <span class="skills__group-label">Design</span>
+          <h3>UX &amp; Research</h3>
+          <ul class="skills__list">
+            <li>Figma</li>
+            <li>User research</li>
+            <li>Usability testing</li>
+            <li>Affinity diagramming</li>
+            <li>Journey mapping</li>
+            <li>Survey design</li>
+            <li>Mixed-methods research</li>
+          </ul>
+        </div>
+
+        <div class="skills__group">
+          <span class="skills__group-label">Tools</span>
+          <h3>Langs &amp; Platforms</h3>
+          <ul class="skills__list">
+            <li>Java / C</li>
+            <li>Processing</li>
+            <li>Weka</li>
+            <li>GitHub</li>
+            <li>Google Cloud Platform</li>
+            <li>LaTeX</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── PROJECTS ─────────────────────────────────────────────── -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <span class="section__label reveal">Projects</span>
+      <h2 class="section__title reveal">Things I've built</h2>
+
+      <div class="projects__list">
+
+        <article class="project-card reveal">
+          <div class="project-card__left">
+            <div class="project-card__meta">
+              <span class="project-card__domain">ML × EdTech</span>
+              <span class="project-card__year">2026</span>
+            </div>
+            <h3 class="project-card__title">Learner Engagement Detection System</h3>
+            <p class="project-card__desc">Real-time facial Action Unit detection from 478 MediaPipe landmarks to classify learner engagement and trigger adaptive feedback. Includes a personal calibration system with deviation-based dead zones to account for individual baseline variance, something most automated engagement tools ignore.</p>
+            <div class="project-card__tags">
+              <span>Python</span><span>OpenCV</span><span>MediaPipe</span>
+            </div>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" class="project-card__link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__left">
+            <div class="project-card__meta">
+              <span class="project-card__domain">Data Science</span>
+              <span class="project-card__year">2025</span>
+            </div>
+            <h3 class="project-card__title">Bay Area Bike Share Demand Prediction</h3>
+            <p class="project-card__desc">Trained a machine learning model on 360k+ trip records to predict hourly bike demand across 40+ stations, hitting 70.21% accuracy. Used systematic feature selection and hyperparameter tuning in scikit-learn to get there.</p>
+            <div class="project-card__tags">
+              <span>Python</span><span>R</span><span>scikit-learn</span><span>pandas</span>
+            </div>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" class="project-card__link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__left">
+            <div class="project-card__meta">
+              <span class="project-card__domain">UX Research</span>
+              <span class="project-card__year">2024</span>
+            </div>
+            <h3 class="project-card__title">K-12 Career Education Platform: UX Research</h3>
+            <p class="project-card__desc">Mixed-methods research with school counselors and district decision-makers to surface why career ed software doesn't get adopted. Synthesized findings via affinity diagramming and journey mapping into stakeholder outreach materials.</p>
+            <div class="project-card__tags">
+              <span>Figma</span><span>User Research</span><span>Affinity Diagramming</span><span>Journey Mapping</span>
+            </div>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" class="project-card__link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Case study
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card__left">
+            <div class="project-card__meta">
+              <span class="project-card__domain">Data × EdTech</span>
+              <span class="project-card__year">2025</span>
+            </div>
+            <h3 class="project-card__title">LAUNCH Program: Data &amp; Metrics System</h3>
+            <p class="project-card__desc">Designed and automated pre/post survey pipelines to generate individual growth profiles and cohort-level STEM confidence summaries for grant reporting. Built transformation logic to track longitudinal skill confidence changes across the program.</p>
+            <div class="project-card__tags">
+              <span>Figma</span><span>Excel</span><span>Google Forms</span><span>Survey Design</span>
+            </div>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" class="project-card__link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── CONTACT ─────────────────────────────────────────────── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <span class="section__label reveal">Contact</span>
+      <h2 class="section__title reveal">Let's talk</h2>
+      <div class="contact__body reveal">
+        <p>I'm actively looking for internships in data science, machine learning, or AI for summer 2027. I've been working mostly in EdTech but I'm open to other domains. If you're doing interesting work with data, I'd love to hear about it.</p>
+        <a class="contact__email" href="mailto:hiabigaillo@gmail.com">hiabigaillo@gmail.com</a>
+        <div class="contact__icons">
+          <a href="https://www.linkedin.com/in/lo-abigail/" target="_blank" rel="noopener" class="contact__icon-link" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" class="contact__icon-link" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <p>Abigail Lo · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
