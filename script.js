@@ -42,9 +42,9 @@ const sectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        navLinks.forEach(a => a.style.color = '');
+        navLinks.forEach(a => a.classList.remove('active'));
         const active = document.querySelector(`.nav__links a[href="#${e.target.id}"]`);
-        if (active) active.style.color = 'var(--text)';
+        if (active) active.classList.add('active');
       }
     });
   },
