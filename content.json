@@ -1,0 +1,150 @@
+{
+  "hero": {
+    "greeting": "Hey, I'm Abigail!",
+    "bio": "I use data and machine learning to understand how people learn, and build tools that actually help them do it better.",
+    "currently": "OAK Lab Research Assistant; DFA Team Lead",
+    "lookingFor": "DS / ML / AI internships, Summer 2027",
+    "email": "hiabigaillo@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/lo-abigail/",
+    "github": "https://github.com/HiAbigailLo"
+  },
+  "about": {
+    "professional": [
+      "I'm a junior at Carnegie Mellon studying Statistics and Machine Learning. Most of my work sits at the intersection of data and human behavior. I'm interested in what the numbers reveal about how people think, learn, and make decisions, and what you can actually do with that.",
+      "Right now I'm a research assistant at the OAK Lab building ML pipelines to analyze how learners discover rules. I'm looking for opportunities in data science, ML, or AI broadly. EdTech is where I've spent most of my time, but I'm genuinely interested in any domain where data can do something useful."
+    ],
+    "beyond": "Outside of work, I enjoy singing and traveling."
+  },
+  "skills": [
+    {
+      "name": "Data Science & ML",
+      "items": [
+        {
+          "text": "Python",
+          "sub": "pandas, NumPy, scikit-learn, PyTorch, TensorFlow, OpenCV, MediaPipe"
+        },
+        {
+          "text": "R"
+        },
+        {
+          "text": "SQL"
+        },
+        {
+          "text": "Java"
+        },
+        {
+          "text": "C"
+        }
+      ]
+    },
+    {
+      "name": "Research & Methods",
+      "items": [
+        {
+          "text": "User research"
+        },
+        {
+          "text": "Usability testing"
+        },
+        {
+          "text": "Affinity diagramming"
+        },
+        {
+          "text": "Journey mapping"
+        },
+        {
+          "text": "Survey design"
+        },
+        {
+          "text": "Mixed-methods research"
+        }
+      ]
+    },
+    {
+      "name": "Design & Tools",
+      "items": [
+        {
+          "text": "Figma"
+        },
+        {
+          "text": "Processing"
+        },
+        {
+          "text": "GitHub"
+        },
+        {
+          "text": "Google Cloud Platform"
+        },
+        {
+          "text": "LaTeX"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Learner Engagement Detection System",
+      "tags": [
+        "ML",
+        "EdTech"
+      ],
+      "desc": "Real-time facial Action Unit detection from 478 MediaPipe landmarks to classify learner engagement and trigger adaptive feedback.",
+      "link": "https://github.com/HiAbigailLo",
+      "linkLabel": "View project →",
+      "image": null
+    },
+    {
+      "title": "Bay Area Bike Share Demand Prediction",
+      "tags": [
+        "Data Science"
+      ],
+      "desc": "Trained a machine learning model on 360k+ trip records to predict hourly bike demand across 40+ stations, hitting 70.21% accuracy.",
+      "link": "https://github.com/HiAbigailLo",
+      "linkLabel": "View project →",
+      "image": null
+    },
+    {
+      "title": "K-12 Career Education Platform: UX Research",
+      "tags": [
+        "UX Research"
+      ],
+      "desc": "Mixed-methods research with school counselors and district decision-makers to surface why career ed software doesn't get adopted.",
+      "link": "https://github.com/HiAbigailLo",
+      "linkLabel": "Case study →",
+      "image": null
+    },
+    {
+      "title": "Personal Portfolio Website",
+      "tags": [
+        "Design",
+        "Dev"
+      ],
+      "desc": "Designed and built this site from scratch using plain HTML, CSS, and JavaScript. Hosted on Firebase with a custom domain.",
+      "link": "https://github.com/HiAbigailLo/website",
+      "linkLabel": "View on GitHub →",
+      "image": "photos/website.png"
+    },
+    {
+      "title": "DFA@CMU x Fortyx80",
+      "tags": [
+        "Human Centered Design",
+        "Data Science"
+      ],
+      "desc": "Designed and automated pre/post survey pipelines to generate individual growth profiles and cohort-level STEM confidence summaries for grant reporting",
+      "link": "https://www.dfaxcmu.org/fortyx80",
+      "linkLabel": "Project Details →",
+      "image": "photos/fortyx80.png"
+    }
+  ],
+  "lastUpdated": "July 2026",
+  "research": [
+    {
+      "badge": "Psychonomics 2026",
+      "title": "Inside blocked practice: Verbal evidence for the attentional mechanisms driving category learning",
+      "authors": "Julia J. Conti, Abigail Lo, Ken R. Koedinger, Paulo F. Carvalho",
+      "desc": "Blocked presentation of information is thought to provide benefits over interleaving by directing attention to commonalities. However, most current evidence is indirect, in the form of posttest performance and eyetracking. In this study, participants learned to classify bugs organized around a relational rule in a 2x2 design manipulating blocked vs. interleaved presentation and example presence vs. absence. Throughout the task, we ask participants to make predictions about the organizing rule. Blocked presentation promoted better post-test performance and more relational feature verbalizations than interleaved; removing examples amplified feature use in both conditions. Moreover, greater increases in relational verbalizations during training positively predicted posttest performance, particularly for blocked learners, suggesting presentation format shapes reasoning trajectories.",
+      "posterLink": "#",
+      "posterImage": "photos/oaklab.png"
+    }
+  ]
+}

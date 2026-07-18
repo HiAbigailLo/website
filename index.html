@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <!-- ── NAV ─────────────────────────────────────────────── -->
+  <!-- NAV -->
   <nav class="nav" id="nav">
     <a class="nav__logo" href="#hero">Abigail Lo</a>
     <ul class="nav__links">
@@ -36,235 +36,81 @@
     </ul>
   </div>
 
-  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <!-- HERO -->
   <section class="hero" id="hero">
     <div class="container">
       <div class="hero__inner">
         <div class="hero__photo-wrap reveal">
-          <img src="headshot.jpg" alt="Abigail Lo" class="hero__photo" />
+          <img src="photos/headshot.jpg" alt="Abigail Lo" class="hero__photo" />
         </div>
-        <div class="hero__content reveal">
-          <h1 class="hero__name">Hey, I'm Abigail!</h1>
-          <p class="hero__bio">I use data and machine learning to understand how people learn, and build tools that actually help them do it better.</p>
-          <div class="hero__currently">
-            <div><span class="hero__label">Currently</span> Research Assistant, OAK Lab</div>
-            <div><span class="hero__label">Looking for</span> DS / ML / AI internships, Summer 2027</div>
-          </div>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#projects">See my work</a>
-            <div class="hero__socials">
-              <a href="mailto:hiabigaillo@gmail.com" class="hero__social-btn" aria-label="Email">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-              </a>
-              <a href="https://www.linkedin.com/in/lo-abigail/" target="_blank" rel="noopener" class="hero__social-btn" aria-label="LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              </a>
-              <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" class="hero__social-btn" aria-label="GitHub">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
+        <!-- filled by render.js from content.json → hero -->
+        <div class="hero__content reveal" id="hero-content"></div>
       </div>
     </div>
   </section>
 
-  <!-- ── ABOUT ─────────────────────────────────────────────── -->
+  <!-- ABOUT -->
   <section class="about section" id="about">
     <div class="container">
       <h2 class="section__title reveal">About</h2>
       <div class="about__inner reveal">
-        <div class="about__professional">
-          <h3 class="about__sub-heading">Professional</h3>
-          <p>I'm a junior at Carnegie Mellon studying Statistics and Machine Learning. Most of my work sits at the intersection of data and human behavior. I'm interested in what the numbers reveal about how people think, learn, and make decisions, and what you can actually do with that.</p>
-          <p>Right now I'm a research assistant at the OAK Lab building ML pipelines to analyze how learners discover rules. I'm looking for opportunities in data science, ML, or AI broadly. EdTech is where I've spent most of my time, but I'm genuinely interested in any domain where data can do something useful.</p>
-        </div>
+        <!-- filled by render.js from content.json → about.professional -->
+        <div class="about__professional" id="about-professional"></div>
         <div class="about__divider" aria-hidden="true"></div>
-        <div class="about__beyond">
-          <h3 class="about__sub-heading">Beyond the Keyboard</h3>
-          <p>Outside of work, I [placeholder — add something personal here].</p>
-          <div class="about__carousel">
-            <div class="about__carousel-track">
-              <div class="about__carousel-placeholder" role="img" aria-label="Photo placeholder"></div>
-            </div>
-            <div class="about__carousel-controls">
-              <button class="about__carousel-btn" aria-label="Previous photo">&#8249;</button>
-              <div class="about__carousel-dots">
-                <span class="about__dot about__dot--active"></span>
-                <span class="about__dot"></span>
-                <span class="about__dot"></span>
-              </div>
-              <button class="about__carousel-btn" aria-label="Next photo">&#8250;</button>
-            </div>
-          </div>
-        </div>
+        <!-- filled by render.js from content.json → about.beyond -->
+        <div class="about__beyond" id="about-beyond"></div>
       </div>
     </div>
   </section>
 
-  <!-- ── SKILLS ─────────────────────────────────────────────── -->
+  <!-- SKILLS -->
   <section class="skills section" id="skills">
     <div class="container">
       <h2 class="section__title reveal">Skills</h2>
-      <div class="skills__grid reveal">
-
-        <div class="skills__group">
-          <div class="skills__group-header">
-            <h3 class="skills__group-name">Data Science &amp; ML</h3>
-            <span class="skills__dot" aria-hidden="true"></span>
-          </div>
-          <hr class="skills__rule" />
-          <ul class="skills__list">
-            <li>Python</li>
-            <li class="skills__sub-item">pandas, NumPy, scikit-learn, PyTorch, TensorFlow, OpenCV, MediaPipe</li>
-            <li>R</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-
-        <div class="skills__group">
-          <div class="skills__group-header">
-            <h3 class="skills__group-name">Research &amp; Methods</h3>
-            <span class="skills__dot" aria-hidden="true"></span>
-          </div>
-          <hr class="skills__rule" />
-          <ul class="skills__list">
-            <li>User research</li>
-            <li>Usability testing</li>
-            <li>Affinity diagramming</li>
-            <li>Journey mapping</li>
-            <li>Survey design</li>
-            <li>Mixed-methods research</li>
-          </ul>
-        </div>
-
-        <div class="skills__group">
-          <div class="skills__group-header">
-            <h3 class="skills__group-name">Design &amp; Tools</h3>
-            <span class="skills__dot" aria-hidden="true"></span>
-          </div>
-          <hr class="skills__rule" />
-          <ul class="skills__list">
-            <li>Figma</li>
-            <li>Java / C</li>
-            <li>Processing</li>
-            <li>GitHub</li>
-            <li>Google Cloud Platform</li>
-            <li>LaTeX</li>
-          </ul>
-        </div>
-
-      </div>
+      <!-- filled by render.js from content.json → skills -->
+      <div class="skills__grid reveal" id="skills-grid"></div>
     </div>
   </section>
 
-  <!-- ── PROJECTS ─────────────────────────────────────────────── -->
+  <!-- PROJECTS -->
   <section class="projects section" id="projects">
     <div class="container">
       <h2 class="section__title reveal">Projects</h2>
-      <div class="projects__grid">
-
-        <article class="project-card reveal">
-          <div class="project-card__image" role="img" aria-label="Project screenshot placeholder"></div>
-          <div class="project-card__body">
-            <span class="project-card__tag">ML × EdTech</span>
-            <h3 class="project-card__title">Learner Engagement Detection System</h3>
-            <p class="project-card__desc">Real-time facial Action Unit detection from 478 MediaPipe landmarks to classify learner engagement and trigger adaptive feedback.</p>
-            <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View project →</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-card__image" role="img" aria-label="Project screenshot placeholder"></div>
-          <div class="project-card__body">
-            <span class="project-card__tag">Data Science</span>
-            <h3 class="project-card__title">Bay Area Bike Share Demand Prediction</h3>
-            <p class="project-card__desc">Trained a machine learning model on 360k+ trip records to predict hourly bike demand across 40+ stations, hitting 70.21% accuracy.</p>
-            <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View project →</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-card__image" role="img" aria-label="Project screenshot placeholder"></div>
-          <div class="project-card__body">
-            <span class="project-card__tag">UX Research</span>
-            <h3 class="project-card__title">K-12 Career Education Platform: UX Research</h3>
-            <p class="project-card__desc">Mixed-methods research with school counselors and district decision-makers to surface why career ed software doesn't get adopted.</p>
-            <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" class="btn btn--outline btn--sm">Case study →</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <img src="website.png" alt="Personal portfolio website screenshot" class="project-card__image project-card__image--photo" />
-          <div class="project-card__body">
-            <span class="project-card__tag">UX × Design × Dev</span>
-            <h3 class="project-card__title">Personal Portfolio Website</h3>
-            <p class="project-card__desc">Designed and built this site from scratch using plain HTML, CSS, and JavaScript. Hosted on Firebase with a custom domain.</p>
-            <a href="https://github.com/HiAbigailLo/website" target="_blank" rel="noopener" class="btn btn--outline btn--sm">View on GitHub →</a>
-          </div>
-        </article>
-
-      </div>
+      <!-- filter buttons filled by render.js from all unique tags across projects -->
+      <div id="projects-filters"></div>
+      <!-- filled by render.js from content.json → projects (each card gets its own .reveal) -->
+      <div class="projects__grid" id="projects-grid"></div>
     </div>
   </section>
 
-  <!-- ── RESEARCH ─────────────────────────────────────────────── -->
+  <!-- RESEARCH -->
   <section class="research section" id="research">
     <div class="container">
       <h2 class="section__title reveal">Research</h2>
-      <div class="research__inner reveal">
-        <div class="research__poster-wrap">
-          <div class="research__poster-img" role="img" aria-label="Research poster placeholder">
-            <span class="research__poster-label">poster</span>
-          </div>
-        </div>
-        <div class="research__content">
-          <span class="research__badge">PNOMIX 2025</span>
-          <h3 class="research__title">[Research title placeholder]</h3>
-          <p class="research__desc">[Abstract placeholder. Add your research abstract here once available. Describe your study, methods, and findings.]</p>
-          <a href="#" class="btn btn--outline btn--sm">View Poster →</a>
-        </div>
-      </div>
+      <!-- filled by render.js from content.json → research (supports multiple entries) -->
+      <div id="research-list"></div>
     </div>
   </section>
 
-  <!-- ── CONTACT ─────────────────────────────────────────────── -->
+  <!-- CONTACT -->
   <section class="contact section" id="contact">
     <div class="container">
       <h2 class="section__title reveal">Contact</h2>
-      <div class="contact__grid reveal">
-        <div class="contact__item">
-          <a href="mailto:hiabigaillo@gmail.com" class="contact__circle" aria-label="Email">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-          </a>
-          <span class="contact__label">Email</span>
-          <span class="contact__handle">hiabigaillo@gmail.com</span>
-        </div>
-        <div class="contact__item">
-          <a href="https://www.linkedin.com/in/lo-abigail/" target="_blank" rel="noopener" class="contact__circle" aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <span class="contact__label">LinkedIn</span>
-          <span class="contact__handle">linkedin.com/in/lo-abigail</span>
-        </div>
-        <div class="contact__item">
-          <a href="https://github.com/HiAbigailLo" target="_blank" rel="noopener" class="contact__circle" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          </a>
-          <span class="contact__label">GitHub</span>
-          <span class="contact__handle">github.com/HiAbigailLo</span>
-        </div>
-      </div>
+      <!-- filled by render.js — links pulled from content.json → hero -->
+      <div class="contact__grid reveal" id="contact-grid"></div>
     </div>
   </section>
 
-  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <p>Abigail Lo · <span id="year"></span></p>
+      <p class="footer__updated">Last updated <span id="last-updated"></span></p>
     </div>
   </footer>
 
+  <!-- render.js must load before script.js so content exists when observers run -->
+  <script src="render.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

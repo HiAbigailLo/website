@@ -14,25 +14,36 @@ burger.addEventListener('click', () => {
   const open = drawer.classList.toggle('open');
   burger.setAttribute('aria-expanded', open);
 });
-// Close drawer on link click
 drawer.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => drawer.classList.remove('open'));
 });
 
 // Scroll reveal
-const revealEls = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(
+// Uses data-observed to avoid double-observing static elements that were
+// already picked up before render.js finished adding dynamic content.
+const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.classList.add('visible');
-        observer.unobserve(e.target);
+        revealObserver.unobserve(e.target);
       }
     });
   },
   { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
 );
-revealEls.forEach(el => observer.observe(el));
+
+function initReveal() {
+  document.querySelectorAll('.reveal:not([data-observed])').forEach(el => {
+    el.setAttribute('data-observed', 'true');
+    revealObserver.observe(el);
+  });
+}
+
+// observe static .reveal elements (section titles, photo wrap, etc.)
+initReveal();
+// re-run after render.js injects dynamic content (project cards, research, etc.)
+document.addEventListener('content:ready', initReveal);
 
 // Active nav link highlight
 const sections = document.querySelectorAll('section[id]');
