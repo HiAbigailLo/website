@@ -98,10 +98,12 @@ Content Management
 - render.js fetches content.json and builds each section dynamically
 - admin.html is a visual editor — add/edit/reorder cards without touching code
 - server.py replaces python3 -m http.server and adds a /save endpoint so the admin panel writes content.json directly
+
 Research section
 - Poster image now fits inside the frame without cropping
 - Added authors line below the conference badge
 - Abstract collapses to 3 lines with a See more/See less toggle
+
 Housekeeping
 - Added project tag filtering with multi-select chip UI in admin panel
 - Added "Last updated" line to footer, auto-stamped on deploy via deploy.sh
