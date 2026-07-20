@@ -58,28 +58,77 @@ function renderHero(h) {
 
 function renderAbout(a) {
   document.getElementById('about-professional').innerHTML = `
-    <h3 class="about__sub-heading">Professional</h3>
     ${a.professional.map(p => `<p>${p}</p>`).join('')}
-  `;
-
-  document.getElementById('about-beyond').innerHTML = `
-    <h3 class="about__sub-heading">Beyond the Keyboard</h3>
-    <p>${a.beyond}</p>
-    <div class="about__carousel">
-      <div class="about__carousel-track">
-        <div class="about__carousel-placeholder" role="img" aria-label="Photo placeholder"></div>
-      </div>
-      <div class="about__carousel-controls">
-        <button class="about__carousel-btn" aria-label="Previous photo">&#8249;</button>
-        <div class="about__carousel-dots">
-          <span class="about__dot about__dot--active"></span>
-          <span class="about__dot"></span>
-          <span class="about__dot"></span>
+    <button class="about__more-btn" onclick="toggleFunFacts(this)">Fun facts about me ↓</button>
+    <div class="about__fun-facts">
+      <ul class="about__facts-list">
+        ${(a.funFacts || []).map(f => `<li>${f}</li>`).join('')}
+      </ul>
+      <div class="about__carousel" id="about-carousel">
+        <div class="about__carousel-track">
+          ${(a.carouselPhotos && a.carouselPhotos.length)
+            ? a.carouselPhotos.map((p, i) => `
+                <div class="about__carousel-slide${i === 0 ? ' active' : ''}">
+                  <img src="${p.src}" alt="${p.caption || `Photo ${i + 1}`}" />
+                  ${p.caption ? `<p class="about__carousel-caption">${p.caption}</p>` : ''}
+                </div>`
+              ).join('')
+            : `<div class="about__carousel-placeholder" role="img" aria-label="Photo placeholder"></div>`
+          }
         </div>
-        <button class="about__carousel-btn" aria-label="Next photo">&#8250;</button>
+        ${(a.carouselPhotos && a.carouselPhotos.length > 1) ? `
+        <div class="about__carousel-controls">
+          <button class="about__carousel-btn" aria-label="Previous photo" onclick="carouselPrev()">&#8249;</button>
+          <div class="about__carousel-dots" id="carousel-dots">
+            ${a.carouselPhotos.map((_, i) =>
+              `<span class="about__dot${i === 0 ? ' about__dot--active' : ''}"></span>`
+            ).join('')}
+          </div>
+          <button class="about__carousel-btn" aria-label="Next photo" onclick="carouselNext()">&#8250;</button>
+        </div>` : ''}
       </div>
     </div>
   `;
+}
+
+let _carouselIndex = 0;
+let _carouselTimer = null;
+
+function carouselNav(dir) {
+  const slides = document.querySelectorAll('.about__carousel-slide');
+  const dots   = document.querySelectorAll('#carousel-dots .about__dot');
+  if (!slides.length) return;
+  slides[_carouselIndex].classList.remove('active');
+  dots[_carouselIndex]?.classList.remove('about__dot--active');
+  _carouselIndex = (_carouselIndex + dir + slides.length) % slides.length;
+  slides[_carouselIndex].classList.add('active');
+  dots[_carouselIndex]?.classList.add('about__dot--active');
+}
+
+function carouselPrev() {
+  clearInterval(_carouselTimer);
+  carouselNav(-1);
+  _carouselTimer = setInterval(() => carouselNav(1), 5000);
+}
+
+function carouselNext() {
+  clearInterval(_carouselTimer);
+  carouselNav(1);
+  _carouselTimer = setInterval(() => carouselNav(1), 5000);
+}
+
+function startCarouselAuto() {
+  const slides = document.querySelectorAll('.about__carousel-slide');
+  if (slides.length > 1) {
+    _carouselTimer = setInterval(() => carouselNav(1), 5000);
+  }
+}
+
+function toggleFunFacts(btn) {
+  const panel = btn.nextElementSibling;
+  const isOpen = panel.classList.toggle('open');
+  btn.textContent = isOpen ? 'Less about me ↑' : 'Fun facts about me ↓';
+  if (isOpen) startCarouselAuto(); else clearInterval(_carouselTimer);
 }
 
 

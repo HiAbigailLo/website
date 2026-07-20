@@ -1,8 +1,8 @@
 {
   "hero": {
     "greeting": "Hey, I'm Abigail!",
-    "bio": "I use data and machine learning to understand how people learn, and build tools that actually help them do it better.",
-    "currently": "OAK Lab Research Assistant; DFA Team Lead",
+    "bio": "I care about the person behind the data — and building things that support and adjust to their needs, whether that's through machine learning or human-centered design.",
+    "currently": "<a href=\"https://www.theoaklab.org/home\" target=\"_blank\" rel=\"noopener\">OAK Lab</a> Research Assistant; <a href=\"https://www.dfaxcmu.org/about\" target=\"_blank\" rel=\"noopener\">DFA</a> Team Lead",
     "lookingFor": "DS / ML / AI internships, Summer 2027",
     "email": "hiabigaillo@gmail.com",
     "linkedin": "https://www.linkedin.com/in/lo-abigail/",
@@ -10,10 +10,34 @@
   },
   "about": {
     "professional": [
-      "I'm a junior at Carnegie Mellon studying Statistics and Machine Learning. Most of my work sits at the intersection of data and human behavior. I'm interested in what the numbers reveal about how people think, learn, and make decisions, and what you can actually do with that.",
-      "Right now I'm a research assistant at the OAK Lab building ML pipelines to analyze how learners discover rules. I'm looking for opportunities in data science, ML, or AI broadly. EdTech is where I've spent most of my time, but I'm genuinely interested in any domain where data can do something useful."
+      "I am a junior at Carnegie Mellon University studying Statistics and Machine Learning, interested in how models can adapt to individuals rather than optimizing for the average user. My work sits at the intersection of quantitative research, where I study patterns in how people think and learn, and human-centered design, where I build to serve that individuality.",
+      "Currently, I am researching at the OAK Lab, where I build ML pipelines to extract features from learners' strategies and use statistical analyses to understand what that reveals about individual learning. With Design for America, I have worked directly with nonprofit partners in Pittsburgh, conducting user research, prototyping, and iterating on products through rounds of client feedback to translate their needs into something useful.",
+      "I'm looking broadly across DS/ML/AI/UX internships for Summer 2027. You can check out the Projects and Research tabs for my work!"
     ],
-    "beyond": "Outside of work, I enjoy singing and traveling."
+    "funFacts": [
+      "🎤 VP of Internal Affairs for C#, CMU's largest singing organization",
+      "🎧 My favorite music genres are musical theater and K-pop!",
+      "🐶 Snoopy collector\n\"Keep looking up, that's the secret of life.\" —Snoopy",
+      "✨ I love Studio Ghibli Films"
+    ],
+    "carouselPhotos": [
+      {
+        "src": "photos/spring26.jpg",
+        "caption": "C#'s Spring 2026 Concert"
+      },
+      {
+        "src": "photos/phantom.jpeg",
+        "caption": "Seeing Phantom of the Opera!!"
+      },
+      {
+        "src": "photos/snoopy.jpeg",
+        "caption": "Two-Story Snoopy Store!!"
+      },
+      {
+        "src": "photos/totoro.jpeg",
+        "caption": "Meeting Totoro!"
+      }
+    ]
   },
   "skills": [
     {
@@ -94,26 +118,6 @@
       "image": null
     },
     {
-      "title": "Bay Area Bike Share Demand Prediction",
-      "tags": [
-        "Data Science"
-      ],
-      "desc": "Trained a machine learning model on 360k+ trip records to predict hourly bike demand across 40+ stations, hitting 70.21% accuracy.",
-      "link": "https://github.com/HiAbigailLo",
-      "linkLabel": "View project →",
-      "image": null
-    },
-    {
-      "title": "K-12 Career Education Platform: UX Research",
-      "tags": [
-        "UX Research"
-      ],
-      "desc": "Mixed-methods research with school counselors and district decision-makers to surface why career ed software doesn't get adopted.",
-      "link": "https://github.com/HiAbigailLo",
-      "linkLabel": "Case study →",
-      "image": null
-    },
-    {
       "title": "Personal Portfolio Website",
       "tags": [
         "Design",
@@ -125,18 +129,36 @@
       "image": "photos/website.png"
     },
     {
+      "title": "Bay Area Bike Share Demand Prediction",
+      "tags": [
+        "Data Science"
+      ],
+      "desc": "Trained a machine learning model on 360k+ trip records to predict hourly bike demand across 40+ stations, hitting 70.21% accuracy.",
+      "link": "https://github.com/HiAbigailLo",
+      "linkLabel": "View project →",
+      "image": null
+    },
+    {
+      "title": "DFA@CMU x Smart Futures",
+      "tags": [
+        "Human Centered Design"
+      ],
+      "desc": "Conducted mixed-methods user research to surface barriers to software adoption, delivering final one-page pamphlets tailored to counselors and key decision-makers",
+      "link": "https://www.dfaxcmu.org/smart-futures",
+      "linkLabel": "Details →",
+      "image": "photos/sf.png"
+    },
+    {
       "title": "DFA@CMU x Fortyx80",
       "tags": [
-        "Human Centered Design",
-        "Data Science"
+        "Human Centered Design"
       ],
       "desc": "Designed and automated pre/post survey pipelines to generate individual growth profiles and cohort-level STEM confidence summaries for grant reporting",
       "link": "https://www.dfaxcmu.org/fortyx80",
-      "linkLabel": "Project Details →",
+      "linkLabel": "Details →",
       "image": "photos/fortyx80.png"
     }
   ],
-  "lastUpdated": "July 2026",
   "research": [
     {
       "badge": "Psychonomics 2026",

@@ -454,18 +454,20 @@
       <!-- ── ABOUT PANEL ─────────────────────────────────────── -->
       <div id="panel-about" class="panel">
         <h2 class="panel__title">About</h2>
-        <p class="panel__desc">Two-column split: professional background on the left, beyond the keyboard on the right.</p>
+        <p class="panel__desc">Professional bio paragraphs, fun facts, and carousel photos shown in the expandable section.</p>
 
         <div class="group-label">Professional Paragraphs</div>
         <div id="about-paras"></div>
         <button class="btn-add" onclick="addParagraph()">+ Add Paragraph</button>
 
-        <div class="group-label" style="margin-top:20px">Beyond the Keyboard</div>
-        <div class="card">
-          <div class="field">
-            <textarea id="a-beyond" placeholder="Outside of work, I..."></textarea>
-          </div>
-        </div>
+        <div class="group-label" style="margin-top:20px">Fun Facts</div>
+        <div id="about-facts"></div>
+        <button class="btn-add" onclick="addFunFact()">+ Add Fun Fact</button>
+
+        <div class="group-label" style="margin-top:20px">Carousel Photos</div>
+        <p class="panel__desc" style="margin-bottom:12px">Drop photos into the <code style="font-family:var(--mono);font-size:12px">photos/</code> folder and enter the filename (e.g. <code style="font-family:var(--mono);font-size:12px">photos/sf.png</code>).</p>
+        <div id="about-carousel-admin"></div>
+        <button class="btn-add" onclick="addCarouselPhoto()">+ Add Photo</button>
       </div>
 
       <!-- ── SKILLS PANEL ────────────────────────────────────── -->
@@ -551,7 +553,51 @@
       (a.professional || []).forEach((text, i) => {
         container.appendChild(makeParagraphEl(text, i));
       });
-      setVal('a-beyond', a.beyond);
+
+      const factsContainer = document.getElementById('about-facts');
+      factsContainer.innerHTML = '';
+      (a.funFacts || []).forEach(f => factsContainer.appendChild(makeFunFactEl(f)));
+
+      const carouselContainer = document.getElementById('about-carousel-admin');
+      carouselContainer.innerHTML = '';
+      (a.carouselPhotos || []).forEach(src => carouselContainer.appendChild(makeCarouselPhotoEl(src)));
+    }
+
+    function makeFunFactEl(text) {
+      const div = document.createElement('div');
+      div.className = 'card fact-card';
+      div.innerHTML = `
+        <div class="field" style="display:flex;gap:8px;align-items:flex-start">
+          <textarea name="fact" placeholder="🎤 Fun fact..." style="flex:1;min-height:60px">${esc(text)}</textarea>
+          <button class="btn-xs danger" onclick="this.closest('.fact-card').remove()">Delete</button>
+        </div>
+      `;
+      return div;
+    }
+
+    function addFunFact() {
+      document.getElementById('about-facts').appendChild(makeFunFactEl(''));
+    }
+
+    function makeCarouselPhotoEl(photo) {
+      const src     = typeof photo === 'string' ? photo : (photo?.src || '');
+      const caption = typeof photo === 'string' ? '' : (photo?.caption || '');
+      const div = document.createElement('div');
+      div.className = 'card carousel-photo-card';
+      div.innerHTML = `
+        <div style="display:flex;gap:8px;align-items:flex-start">
+          <div class="field" style="flex:1;display:flex;flex-direction:column;gap:6px">
+            <input type="text" name="carousel-src" value="${esc(src)}" placeholder="photos/filename.jpg" />
+            <input type="text" name="carousel-caption" value="${esc(caption)}" placeholder="Caption (optional)" />
+          </div>
+          <button class="btn-xs danger" style="margin-top:4px" onclick="this.closest('.carousel-photo-card').remove()">Delete</button>
+        </div>
+      `;
+      return div;
+    }
+
+    function addCarouselPhoto() {
+      document.getElementById('about-carousel-admin').appendChild(makeCarouselPhotoEl(''));
     }
 
     function makeParagraphEl(text, index) {
@@ -828,11 +874,18 @@
           github:     getVal('h-github')
         },
         about: {
-          // each .para-card has one <textarea name="para">
           professional: [...document.querySelectorAll('.para-card textarea[name="para"]')]
             .map(el => el.value.trim())
             .filter(Boolean),
-          beyond: getVal('a-beyond')
+          funFacts: [...document.querySelectorAll('.fact-card textarea[name="fact"]')]
+            .map(el => el.value.trim())
+            .filter(Boolean),
+          carouselPhotos: [...document.querySelectorAll('.carousel-photo-card')]
+            .map(card => ({
+              src:     card.querySelector('[name="carousel-src"]').value.trim(),
+              caption: card.querySelector('[name="carousel-caption"]').value.trim()
+            }))
+            .filter(p => p.src)
         },
         skills: [...document.querySelectorAll('.skill-group')].map(g => ({
           name: g.querySelector('[name="group-name"]').value,

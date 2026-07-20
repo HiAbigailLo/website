@@ -4,15 +4,16 @@ Personal portfolio site built with HTML, CSS, and JavaScript. Hosted on Firebase
 
 ## Features
 
-- **Hero** — full-screen intro with headshot, bio, current role, and social links
-- **About** — two-column split between professional background and beyond the keyboard, with a photo carousel placeholder
+- **Hero** — intro with headshot, bio, current role with linked organizations, and social links
+- **About** — professional bio with a collapsible "Fun facts" section containing a fun facts list and auto-advancing photo carousel with captions
 - **Skills** — three-column grid (Data Science & ML / Research & Methods / Design & Tools)
-- **Projects** — card grid with image, tag, description, and link for each project
+- **Projects** — card grid with tag filtering, image, description, and link for each project
 - **Research** — dedicated section for conference posters and academic work, with collapsible abstract and authors line
 - **Contact** — centered icon layout linking to email, LinkedIn, and GitHub
 - Scroll reveal animations on all sections
 - Fixed nav with blur effect and active link highlight based on scroll position
 - Mobile-responsive with hamburger menu drawer
+- Footer with auto-stamped "last updated" date on every deploy
 
 ## Design choices
 
@@ -108,5 +109,13 @@ Housekeeping
 - Added project tag filtering with multi-select chip UI in admin panel
 - Added "Last updated" line to footer, auto-stamped on deploy via deploy.sh
 - Moved all images into photos folder
+
+### Jul 20, 2026 — About Section Overhaul + Polish
+About section
+- Replaced "Beyond the Keyboard" split with a collapsible "Fun facts about me" button
+- Fun facts list with emoji support and multi-line text (Enter key works in admin)
+- Photo carousel inside the expandable section — auto-advances every 5 seconds, resets on manual nav
+- Carousel photos support captions; 16:9 aspect ratio
+- Carousel photos and fun facts fully editable in admin panel
 
 </details>
